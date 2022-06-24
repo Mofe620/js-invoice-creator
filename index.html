@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Generate your Invoice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h3>Invoice Creator</h3>
+                <p>Thanks for choosing GoodCorp, LLC!</p>
+            </div>
+            <div class="task-buttons">
+                <button id="washCar">Wash Car: $10</button>
+                <button id="mowLawn">Mow Lawn: $20</button>
+                <button id="pullWeeds">Pull Weeds: $30</button>
+            </div>
+            <div class="tasks-section">
+                <div class="tasks-heading">
+                    <p>TASK</p>
+                    <p>TOTAL</p>
+                </div>
+                <div class="tasks-list">
+                    <!-- <div class="task-item initial">
+                        <div class="task-selected">
+                            <p class="task-title">Wash Car</p><span id='remove'>Remove</span>
+                        </div>
+                        <p class="price"><span>$</span>10</p>
+                    </div> -->
+                </div>
+                <div class="tasks-heading line">
+                    <p>NOTES</p>
+                    <p>TOTAL AMOUNT</p>
+                </div>
+                <div class="tasks-amount">
+                    <p id="notes">We accept cash, credit card, or PayPal</p>
+                    <h4>$<span id="total">0</span></h4>
+                </div>
+                <button class="submit">
+                    <img src="images/mail.png" alt="">
+                    <p>Send Invoice</p>
+                </button>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
