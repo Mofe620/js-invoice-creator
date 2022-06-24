@@ -137,8 +137,15 @@ button:hover {
     margin: 3em 0em 1em;
     padding: 0.5em 1.75em;
 }
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 0.75rem;
+}
 :is(footer) a, a:visited {
     text-decoration: none;
+    text-align: center;
     margin: 0 auto;
     color: inherit;
 }
