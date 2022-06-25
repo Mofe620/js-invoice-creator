@@ -37,7 +37,7 @@ buttons.forEach(button => {
             const newTask = 
             `<div class="task-item">
                 <div class="task-selected">
-                    <p class="task-title">${task}</p><span id='remove' onclick='remove()'>Remove</span>
+                    <p class="task-title">${task}</p><span id='remove' title='${price}'>Remove</span>
                 </div>
                 <p class="price"><span>$</span>${price}</p>
             </div>`
@@ -45,18 +45,30 @@ buttons.forEach(button => {
             taskArea.innerHTML += newTask;
             total.textContent = totalCost;
             e.target.disabled = true;
-            const remBtn = document.querySelectorAll('#remove');
-            console.log(remBtn.parentElement);
+
+            // REMOVE TASK
+            const removeBtn = document.querySelectorAll('#remove');
+            removeBtn.forEach(rem => {
+                rem.addEventListener('click', ()=>{
+                    rem.parentNode.parentNode.remove();
+                    price = rem.title;
+                    totalCost -= price;
+                    total.textContent = totalCost;
+
+                    //Enable Task Button, if task is removed from selected list
+                    switch(price){
+                        case '10':
+                        carBtn.disabled = false;
+                        break;
+                        case '20':
+                        lawnBtn.disabled = false;
+                        break;
+                        case '30':
+                        weedBtn.disabled = false;
+                        break;
+                    }
+                })
+            })
+
     })
 })
-// const remBtn = document.querySelectorAll('#remove');
-// remBtn.forEach(rem => {
-//     rem.addEventListener('click', (q)=>{
-//         alert(5+4);
-//         q.target.parentNode.parentNode.remove();
-//     })
-// })
-function remove(){
-    console.log(r);
-    r.target.parentNode.parentNode.remove();
-}
